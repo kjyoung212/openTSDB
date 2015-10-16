@@ -1,0 +1,4 @@
+--------pip install python-lxml       에러
+Could not find a version that satisfies the requirement python-lxml (from versions: )
+No matching distribution found for python-lxml
+-------- 에러가 왜 계속 나는건지는 모르겠지만 다음시간에 교수님이 알려주신다고 했다.!
