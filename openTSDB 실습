@@ -2,3 +2,17 @@
 Could not find a version that satisfies the requirement python-lxml (from versions: )
 No matching distribution found for python-lxml
 -------- 에러가 왜 계속 나는건지는 모르겠지만 다음시간에 교수님이 알려주신다고 했다.!
+
+-------------pip install lxml   
+교수님이 알려준대로 다시 yum install python-devel 하고 lxml 깔아봤지만 역시 에러가났다.
+Command "/usr/bin/python -c "import setuptools, 
+tokenize;__file__='/tmp/pip-build-VZzIFv/lxml/setup.py';
+exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))"
+install --record /tmp/pip-JdzAkH-record/install-record.txt --single-version-externally-managed --compile"
+failed with error code 1 in /tmp/pip-build-VZzIFv/lxml
+
+이런 에러가 났는데 .. 왜 났는지는 모르겠다.
+다음시간에 다시 한번 더 해본다고 한다.
+-----------------------------------------------------------------------------
+
+
