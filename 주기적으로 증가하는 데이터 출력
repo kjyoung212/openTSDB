@@ -1,0 +1,29 @@
+url = "http://127.0.0.1:4242/api/put"
+i=0
+while 1 :
+        t = time.localtime()
+        tsec = t.tm_sec
+        if tsec%20!=0 :
+                print tsec
+                time.sleep(1)
+
+        else :
+                data = {
+                        "metric": "roof_100.bar",
+                        "timestamp": time.time(),
+                        "value": i,
+                        "tags": {
+                                "host": "mypc"
+                                }
+                        }
+                i=i+1
+                ret = requests.post(url,data=json.dumps(data))
+                time.sleep(1)
+                print "ok"
+
+///////////////////////////////////////////
+
+i 값을 0으로 초기화 해주고
+value 값을 변수인 i 로 설정해주고 
+밑에가서 i값을 증가시켜주면
+0부터 1씩 증가해서 데이터가 출력되게 된다.
