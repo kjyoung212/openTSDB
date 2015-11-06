@@ -9,19 +9,19 @@ while 1 :
 
         else :
                 data = {
-                        "metric": "roof_100.bar",
-                        "timestamp": time.time(),
-                        "value": i,
+                        "metric": "roof_100.bar",       //metric 이름 설정
+                        "timestamp": time.time(),       
+                        "value": i,                     //보낼 벨류값 설정
                         "tags": {
-                                "host": "mypc"
+                                "host": "mypc"          //태그 설정해주는것
                                 }
                         }
-                i=i+1
-                ret = requests.post(url,data=json.dumps(data))
+                i=i+1           //i값 증가
+                ret = requests.post(url,data=json.dumps(data))// 데이터를 보내주게 된다
                 time.sleep(1)
                 print "ok"
 
-///////////////////////////////////////////
+/////////////////////////////////////////// restful 방식.!
 
 i 값을 0으로 초기화 해주고
 value 값을 변수인 i 로 설정해주고 
