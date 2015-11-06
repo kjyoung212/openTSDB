@@ -1,7 +1,11 @@
-1.   cd /usr/local/data/hbase-1.1.2/bin
+1.   cd /usr/local/data/hbase-1.1.2/bin  //디렉터리가서
 
-2.   ./stop-hbase.sh
+2.   ./stop-hbase.sh          // hbase를 일단 멈춰주고
 
-3.   ./start-hbase.sh
+3.    source /etc/profile     //source 실행해주고
 
-4.   cd /usr/local/opentsdb/
+4.   ./start-hbase.sh         //다시 start해줌
+
+5.   cd /usr/local/opentsdb/  //opentsdb 로 가서
+
+6.   ./build/tsdb tsd --port=4242 --staticroot=build/staticroot --cachedir=/usr/local/data --auto-metric    //hbase시작
