@@ -1,3 +1,7 @@
+  ps -ax |grep opentsdb             //실행중인 프로세스 확인
+  
+  kill -9 번호              //프로세스 죽이기
+
 1.   cd /usr/local/data/hbase-1.1.2/bin  //디렉터리가서
 
 2.   ./stop-hbase.sh          // hbase를 일단 멈춰주고
