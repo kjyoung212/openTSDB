@@ -52,5 +52,10 @@ if __name__ == '__main__':
 			print tsec
 			time.sleep(1)
 		else :
-                    insert(1111)    
-		getData(page)
+			getData(page)
+
+
+
+
+
+// 주기적으로 서울 먼지 c[8]값을 넣는 코드
