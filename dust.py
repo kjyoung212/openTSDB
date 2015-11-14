@@ -44,5 +44,13 @@ if __name__ == '__main__':
 
 	page = urllib2.urlopen(url).read()
 	#print page
+	while 1 :
+		t = time.localtime()
+		tsec = t.tm_sec
 
-	getData(page)
+		if tsec%10!=0 :
+			print tsec
+			time.sleep(1)
+		else :
+                    insert(1111)    
+		getData(page)
