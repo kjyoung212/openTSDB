@@ -63,3 +63,8 @@ while 1 :
         else :
     # processing temperature
                 temp_process(xml_raw)
+
+
+
+//insert 함수 부분에서 데이터를 보내주게 된다.!! 파라미터 옮겨줌..
+//insert 함수가 2개라서 그래프가 총 2개 표시 됨 . tag도 구분해서 나옴
