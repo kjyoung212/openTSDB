@@ -19,7 +19,7 @@ def insert(metric_name, tag_site, value):
         "timestamp":time.time(),
         "value":value,
         "tags":{
-            "NodeID":tag_site
+            "NodeID":tag_site //노드아이디
         }
     }
 
@@ -56,7 +56,7 @@ def sese(s):
 
                 t = int(time.time())
                 
-		insert('temperature',nodeID,v1)
+		insert('temperature',nodeID,v1) //insert 함수로 값과 노드아이디,metric 명을 보내줌
 
         else:
                 #print >> sys.stderr, "Invalid type : " + type
