@@ -1,0 +1,9 @@
+web2py 웹페이지를 쉽게 만들수있게 도와주는거다.
+
+wget http://www.web2py.com/examples/static/web2py_src.zip //우선 다운로드를 하고
+unzip web2py_src.zip
+cd web2py           //설치후 web2py 디렉터리로 이동
+
+python web2py.py  //web2py 를 실행해주면
+
+http://127.0.0.1:8000 // firefox 에서 이주소로가면 welcome 이 뜬다.
