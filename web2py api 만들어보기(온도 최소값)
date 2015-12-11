@@ -10,12 +10,15 @@ param_id = request.vars['id']
 
 #url = "http://127.0.0.1:4242/api/query?start=1m-ago&m=sum:temperature%7Bid=" + param_id + "%7D&o=&yrange=%5B0:%5D&key=out%20bottom%20center%20box&wxh=740x345&autoreload=15"
 url ="http://125.7.128.52:4242/api/query?start=6h-ago&m=sum:gyu_RC1_thl.temperature%7Bnodeid=" + param_id + "%7D&o=&yrange=%5B0:%5D&wxh=1099x453&autoreload=15"
+//url 부분을 교수님집에 설치된 온도를 가져오기위해 125.7.128.52:4242 에가서 설정해주고 /api/query? 를 붙여사 가져온다
+//param_id 부분은 ?id = 2303 이런식으로 id 값을 주소창에서 바꿔가면서 할수있게 하기위해 필요한 부분.
+
 def make_json(max_val):
         json = {"max":{"id":param_id, "value":max_val}}
         return json
 
 def make_data(raw_data):
-        max_val = 100
+        max_val = 1000  // 최소값구하기위해 값설정
 
         tmp_data = raw_data.replace('u' , '')
         tmp_data = raw_data.replace('{' , '')
@@ -29,7 +32,7 @@ def make_data(raw_data):
                 arr_Value = arr_data[1].strip()
 
                 if float(arr_Value) <  float(max_val):
-                        max_val = arr_Value
+                        max_val = arr_Value //최소값이면 변수에 최소값을 넣어준다.
         return max_val
 
 def test():
